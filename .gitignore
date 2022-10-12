@@ -560,3 +560,4 @@ MigrationBackup/
 .ionide/
 
 .problem-solving-training.iml/
+.out/*
