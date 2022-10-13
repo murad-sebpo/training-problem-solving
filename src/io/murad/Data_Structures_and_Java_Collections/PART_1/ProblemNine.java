@@ -1,11 +1,9 @@
 package io.murad.Data_Structures_and_Java_Collections.PART_1;
 
-import java.util.Scanner;
-
 /**
  * How do you count the occurrence of a given character in a string?
  */
-public class ProblemEight {
+public class ProblemNine {
 
     static int characterOccurrenceCount(String text, char ch) {
         char[] convertedToChar = text.toCharArray();
