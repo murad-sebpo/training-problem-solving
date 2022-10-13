@@ -16,6 +16,15 @@ public class Arrays {
         for(int age : ages){
             System.out.println("Age List: " + age);
         }
+
+        // Print the index 4
+        System.out.println(ages[4]);
+
+        // Print in reverse order
+        for(int i = ages.length-1; i >= 0; i--){
+            System.out.println("Age List in Reverse Order: " + ages[i]);
+        }
+
         double[] salaries = new double[10];
         salaries[0] =  55000.46;
         salaries[1] =  15000.73;
@@ -39,5 +48,9 @@ public class Arrays {
             }
             System.out.println();
         }
+
+        String str = "BanglaDesh";
+        String reverse = String.valueOf(new StringBuffer(str).reverse());
+        System.out.println(reverse);
     }
 }
