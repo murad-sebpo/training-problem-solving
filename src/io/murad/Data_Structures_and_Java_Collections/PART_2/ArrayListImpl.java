@@ -1,6 +1,7 @@
 package io.murad.Data_Structures_and_Java_Collections.PART_2;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -17,6 +18,16 @@ public class ArrayListImpl {
 
         persons.forEach(person -> {
             System.out.println(person.getFirstName() + " " + person.getLastName() + " is " + person.getAge() + " years old.");
+
+        });
+
+        // List in reverse order
+        Collections.reverse(persons);
+
+        persons.forEach(person -> {
+            System.out.println("Reverse Order");
+            System.out.println(person.getFirstName() + " " + person.getLastName() + " is " + person.getAge() + " years old.");
+
         });
 
     }
