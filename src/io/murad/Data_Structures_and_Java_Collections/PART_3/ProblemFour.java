@@ -19,28 +19,46 @@ import java.util.Objects;
  */
 public class ProblemFour {
 
-    public static void main(String[] args) {
-        Map<String, List<String>> dictionary = new HashMap<>();
-        Map<String, Map<String,String>> dictionarys = new HashMap<>();
+    static String dictionary(Map<String, List<String>> dictionary) {
+        final StringBuilder builder = new StringBuilder();
+        String addresses = "";
+        String names = "";
+        for (String name : dictionary.keySet()) {
+            builder.append(name);
+            if (dictionary.get(name) != null) {
+                for (String address : dictionary.get(name)) {
 
-
-        dictionary.put("1", List.of("Mirpur", "Dhanmondi"));
-        dictionary.put("2", null);
-
-//        dictionary.
-
-        for (String key : dictionary.keySet()) {
-//                   for(List )
-            for(List<String> d : dictionary.values()){
-                if(key!=null){
-                    System.out.println(" Individual "+ key + d );
-                }else{
-                    System.out.println("Adress not found");
+//                    System.out.println(name + " Address " + address + " , ");
+//                    addresses = address;
+                    builder.append(address);
                 }
-
+            } else {
+//                System.out.println(name + " NO ADDRESS");
+                return name + " NO ADDRESS";
             }
         }
+        return builder.toString();
+    }
 
+    public static void main(String[] args) {
+        Map<String, List<String>> dictionary = new HashMap<>();
+
+        dictionary.put("Akib", List.of("Mirpur", "Dhanmondi", "Shiddheshwari"));
+        dictionary.put("Sajeeb", List.of("Lalmatia"));
+        dictionary.put("Niloy", List.of("Puran Dhaka", "Rajarbag"));
+        dictionary.put("Ratul", null);
+
+        for (String name : dictionary.keySet()) {
+
+            if (dictionary.get(name) != null) {
+                for (String address : dictionary.get(name)) {
+                    System.out.println(name + " Address " + address);
+                }
+            } else {
+                System.out.println(name + " NO ADDRESS");
+            }
+        }
+//        System.out.println(dictionary(dictionary));
 
     }
 
