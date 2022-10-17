@@ -33,6 +33,7 @@ public class ProblemFive {
         for (Map.Entry<Integer, String> company : companyNames.entrySet()) {
             if (company.getValue().contains("SEBPO")) {
                 System.out.println("Key: " + company.getKey());
+                System.out.println(companyNames.get(company.getKey()));
             } else {
                 System.out.println("null");
             }
