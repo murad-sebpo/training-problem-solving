@@ -5,37 +5,25 @@ import java.util.regex.Pattern;
 
 public class ProblemOne {
     public static void main(String[] args) {
-        Pattern pattern = Pattern.compile("\\w+",Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher("hi hello hi hello");
+        Pattern pattern = Pattern.compile("\\w+", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher("he he goes to school");
 
         int count = 0;
         String words = "";
-        while(matcher.find()){
-//            System.out.println(matcher.group());
+        while (matcher.find()) {
             words = words + " " + matcher.group();
-//            System.out.println(matcher.group() +" = "+ matcher.groupCount());
-//            if (words.equals(matcher.group())){
-//                System.out.println(words.length() + " = "+count++);
-//            }
-//            count++;
         }
 
-//        System.out.println(count);
-//        System.out.println(words);
-//
-        String[] wordss = words.split(" ");
+        String[] wordToStringArr = words.split(" ");
 
-        for(int i=0; i<wordss.length;i++){
+        for (int i = 0; i < wordToStringArr.length; i++) {
             count = 1;
-            for(int j=i+1; j<wordss.length;j++){
-                if(wordss[i].equals(wordss[j])){
-                    System.out.println(wordss[i] + " = " + count++);
+            for (int j = i + 1; j < wordToStringArr.length; j++) {
+                if (wordToStringArr[i].equals(wordToStringArr[j])) {
+                    count++;
+                    System.out.println(wordToStringArr[i] + " = " + count);
                 }
             }
-        }
-
-        for(String w : wordss){
-            System.out.println(w);
         }
     }
 }

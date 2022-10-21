@@ -14,10 +14,9 @@ public class ProblemSeven {
             System.out.println("invalid");
         }
 
-
     }
     public static void main(String[] args) {
-        validateDayMonthFormat("^(0?[1-9]|1[0-9]|2[0-9]|3[01])/(0?[1-9]|1[0-2])$","2/29");
+        validateDayMonthFormat("^(0?[1-9]|1[0-9]|2[0-9]|3[01])/(0?[1-9]|1[0-2])$","1/29");
         validateDayMonthFormat("^(0?[1-9]|1[0-9]|2[0-9]|3[01])/(0?[1-9]|1[0-2])$","2/29");
     }
 }

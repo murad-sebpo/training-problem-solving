@@ -14,11 +14,10 @@ public class ProblemFour {
         } else {
             System.out.println("invalid");
         }
-
     }
 
     public static void main(String[] args) {
-        validTimeFormat("^(0?[1-9]|1[0-2]):[0-5][0-9]:[0-5][0-9]$","12:59:59");
-        validTimeFormat("^(0?[1-9]|1[0-2]):[0-5][0-9]:[0-5][0-9]$","12:60:59");
+        validTimeFormat("^(0?[1-9]|1[0-2]):[0-5][0-9]:[0-5][0-9]$", "12:59:59");
+        validTimeFormat("^(0?[1-9]|1[0-2]):[0-5][0-9]:[0-5][0-9]$", "12:60:59");
     }
 }

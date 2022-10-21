@@ -15,7 +15,6 @@ public class ProblemThree {
             System.out.println("invalid");
         }
 
-
     }
 
     public static void main(String[] args) {
