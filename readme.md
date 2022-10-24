@@ -172,7 +172,7 @@ String date1 = "03/22/1993" String date2 = "07/19/2022" String date3 = "01/01/20
 2. Convert Exponential number to integer/ floating-point number
    Given, 1.2345986E9 (exponential number), Convert it to 1.2345986
 
-[Incomplete]()
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/String_Manipulation_and_Date_Problems/PART_B/ProblemTwo.java)
 
 3. Given, a name list: nameList = [“AFT Logistics, LLC n/k/a Equity One Contractors LLC", “BlueChip Financial d/ b/a Spotloan”, “Huhn, Douglas Joseph, Jr.”] i) You have to split the alias from the name and print the name and alias. Split alias when “n/k/a” or “f/k/a” or “d/b/a” follows the name. ii) You have to remove (Jr./Sr.) from the name. Output: Name = AFT Logistics, LLC Alias = Equity One Contractors LLC Name = BlueChip Financial Alias = Spotloan Name = Huhn, Douglas Joseph
 
@@ -183,3 +183,101 @@ String date1 = "03/22/1993" String date2 = "07/19/2022" String date3 = "01/01/20
    Print date if it is not before 1900, 15/04/1754 20-04-2009 16-dec-1971 18/09/1856
 
 [Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/String_Manipulation_and_Date_Problems/PART_A/ProblemSix.java)
+
+## 14 Regex problems
+
+1. Count duplicate words in a sentence|file|string block input.
+
+in : "he he goes to school"\
+out: he: 2, goes: 1, school: 1
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemOne.java)
+
+2. Check whether an email address is valid or not.
+
+in : x@x.com out: valid\
+in : x@x out: invalid\
+in : x@x.com.bd.gov out: valid\
+in : x.x@x.com out: valid\
+in : ~x@x.com out: invalid\
+in : "x@"x.com out: invalid
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemTwo.java)
+
+3. Make a Ip(v4) address validator method.
+
+in : 10.10.10.10 out: valid\
+in : 310.10.10.10 out: invalid\
+in : 255.10.10.10 out: valid\
+in : 2555.10.10.10 out: invalid
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemThree.java)
+
+4. Check if given time format is valid or not. Format: hh:mm:ss [12 hrs]
+
+in : 12.59.59 out: valid\
+in : 12.60.59 out: invalid
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemFour.java)
+
+5. Check if given date format is valid or not. Format: dd/mm/yyyy [yyyy is valid upto 2014]
+
+in : 12/12/1212 : valid\
+in : 12/13/1212 : invalid\
+in : 12/12/12122 : invalid\
+in : 32/12/1212 : invalid
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemFive.java)
+
+6. Check whether a HTML block is unique in a HTML file|string block input.
+
+str: "<div>..</div><div>..</div><p>..</p>"\
+in : div out: duplicate\
+in : p out: unique\
+do this with java regex besides ur regex learning
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemSix.java)
+
+7. Validate "Day and month" format
+in : 2/29 out: invalid
+in : 1/30 out: invalid
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemSeven.java)
+
+8. Only match constant in a set using "char set intersection"
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemEight.java)
+
+9. Match all odd numbers in a string containing both numbers and non numbers
+in: abcd12XY15c1552d13 out:15,13
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemNine.java)
+
+10. Match all words where 1st and last char is same\
+in: all ala imi out: ala imi
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemTen.java)
+
+11. Match all words that contain at least one same uppercase and a lowercase letter\
+in: "Mam Did You tesT alL Students"\
+out: "Mam Did tesT alL Students"
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemEleven.java)
+
+12. Match all string(words)where theres no sub-string "ab"
+in abad acdd adabdd\
+out acdd
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemTwelve.java)
+
+13. Match all strings/words that have exactly 3 'b' in total
+
+in: "abba abbab baba"\
+out: "abbab"
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemThirteen.java)
+
+14. how to compare two date, which one is greater
+01.11.2014 31.10.2019
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemFourteen.java)
