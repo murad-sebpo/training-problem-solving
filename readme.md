@@ -231,7 +231,7 @@ in : 32/12/1212 : invalid
 
 6. Check whether a HTML block is unique in a HTML file|string block input.
 
-str: "<div>..</div><div>..</div><p>..</p>"\
+str: "<<div>..<//div><<div>..<//div><<p>..<//p>"\
 in : div out: duplicate\
 in : p out: unique\
 do this with java regex besides ur regex learning
