@@ -2,6 +2,7 @@ package io.murad.Java_IO_File_Problems;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -106,26 +107,20 @@ public class AdvancedJavaIOFileProblems {
         String dummyText = "Bangladesh India Bhutan Russia China Mongolia France Italy Germany hungary Turkey Egypt Mexico Romania ethiopia";
 
         String[] dummyTextArr = dummyText.split(" ");
-        String nameCapitalized = dummyTextArr[9].substring(0,1).toUpperCase() + dummyTextArr[9].substring(1);
-        System.out.println(nameCapitalized);
+//        String nameCapitalized = dummyTextArr[9].substring(0,1).toUpperCase() + dummyTextArr[9].substring(1);
+//        System.out.println(nameCapitalized);
         String dummyTextWithFirstLetterUppercase = null;
-//
-//        for (String dtext : dummyTextArr) {
-////            dummyTextWithFirstLetterUppercase = dummyTextWithFirstLetterUppercase +
-//            dtext.substring(0,1).toUpperCase();
-//            dummyTextWithFirstLetterUppercase = dummyTextWithFirstLetterUppercase + "\n" + dtext;
-////            System.out.println(dtext);
-//        }
+
 
         for (int i = 0; i < dummyTextArr.length; i++) {
-            System.out.println(dummyTextArr[i].substring(0,1).toUpperCase());
-            dummyTextArr[i].substring(0,1).toUpperCase();
-            System.out.println(dummyTextArr[i]);
-            dummyTextWithFirstLetterUppercase = dummyTextWithFirstLetterUppercase + dummyTextArr[i];
+//            System.out.println(dummyTextArr[i].substring(0,1).toUpperCase());
+//            dummyTextArr[i].substring(0,1).toUpperCase();
+//            System.out.println(dummyTextArr[i]);
+            dummyTextWithFirstLetterUppercase = dummyTextWithFirstLetterUppercase + " " + dummyTextArr[i].substring(0,1).toUpperCase() + dummyTextArr[i].substring(1);;
         }
 
-        System.out.println(ListOfCountries.getAbsolutePath());
-        System.out.println(ListOfCountries.getAbsoluteFile());
+//        System.out.println(ListOfCountries.getAbsolutePath());
+//        System.out.println(ListOfCountries.getAbsoluteFile());
 
         String countryListPath = String.valueOf(ListOfCountries.getAbsoluteFile());
 
@@ -136,7 +131,11 @@ public class AdvancedJavaIOFileProblems {
         BufferedReader bufferedReadertxt2 = new BufferedReader(new FileReader(ListOfCountries));
         String listOfCountries;
         while ((listOfCountries = bufferedReadertxt2.readLine()) != null) {
-            System.out.println(listOfCountries);
+//            System.out.print(listOfCountries);
+        String[] countries = listOfCountries.split(" ");
+            Arrays.stream(countries).forEach(country->{
+                System.out.println(country);
+            });
         }
 
         bufferedReadertxt2.close();
