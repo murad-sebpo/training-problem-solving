@@ -281,3 +281,28 @@ out: "abbab"
 01.11.2014 31.10.2019
 
 [Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Regex_problems/ProblemFourteen.java)
+
+## Java IO File Problems
+
+### One
+Create a text file ‘SEBPO.txt’. Write something in the text file. And read the content of the file.
+Read a CSV file from the desktop. Print the content of the CSV files.
+Suppose you have 10 text files on your computer. Read the content of the 10 text files and print it.
+Create a text file (.txt) using any of your preferred Java File IO methods on your desktop under the folder named ‘Java File I/O Problems’. Make sure you name the file – “ListOfCountries.txt” Tasks – • Copy the dummy text below, paste it as a String in your IDE. String dummyText = “Bangladesh India Bhutan Russia China Mongolia France Italy Germany hungary Turkey Egypt Mexico Romania ethiopia “; • Under a method called, “storeDataToFile(…)”. Store the dummy data in a text file (.txt) which you will create – “ListOfCountries.txt”, such that each country occupies each separate line. [Pre-process the data, using your knowledge of String Manipulation where necessary. Furthermore, there are some countries, whose first letter does not start with an Upper-case, fix this issue.]
+After viewing from the notepad app on the desktop, it will show something like this. View from Notepad app Bangladesh India Bhutan Etc.
+
+• Create a method called, ‘printDataFromFile()’ which prints the data from the file you created in step II, in a sequential manner in the console.
+Console Output :
+
+Bangladesh\
+India\
+Bhutan etc. 
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/Java_IO_File_Problems/AdvancedJavaIOFileProblems.java)
+
+### Two
+Retrieve the data in such a way, from the following 3 files (Data1.xls, Data2.xlsx, Data3.csv). All of them contains the same data, but in different formats. The name of your java class will be = XLSHandler.java, XLSXHandler.java, CSVHandler.java respectively. YOU ARE NOT ALLOWED TO CHANGE THE FORMAT OF THE FILES Tasks – You will be creating 2 methods (printRowWise(), printColumnWise()) to print in a specific manner, for the 3 classes mentioned above. • printRowWise() – This will print the file in a row-wise manner e.g : 1st entry: Name : John Country : USA .. etc.
+
+2nd entry: Name : Michael Country: Italy ...etc.
+
+[Solution](https://github.com/murad-sebpo/training-problem-solving/tree/master/Reading_XLS_CSV_using_Maven)
