@@ -74,7 +74,8 @@ public class GETMethodPractice {
         String content = getMethodPractice.getWebsiteContent(getMethodPractice.WEBSITE_URL);
 
         String outputData = getMethodPractice.scrapeData("<title>(.*?)</title>", content.toString());
-        System.out.println(outputData);
+        outputData = outputData + getMethodPractice.scrapeData("<button>(.*?)</button>", content.toString());
+//        System.out.println(outputData);
 
         getMethodPractice.storeDataToFile(outputData);
     }
