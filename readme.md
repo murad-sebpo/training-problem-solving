@@ -311,3 +311,6 @@ Retrieve the data in such a way, from the following 3 files (Data1.xls, Data2.xl
 
 ### Extract Data from URL using GET method
 [Implementation](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/GET_POST_method_creation_with_Java/GETMethodPractice.java)
+
+### Extract Data from URL using POST method
+[Implementation](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/GET_POST_method_creation_with_Java/PostMethodPractice.java)
