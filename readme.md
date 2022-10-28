@@ -306,3 +306,8 @@ Retrieve the data in such a way, from the following 3 files (Data1.xls, Data2.xl
 2nd entry: Name : Michael Country: Italy ...etc.
 
 [Solution](https://github.com/murad-sebpo/training-problem-solving/tree/master/Reading_XLS_CSV_using_Maven)
+
+## GET - POST method creation with Java
+
+### Extract Data from URL using GET method
+[Implementation](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/GET_POST_method_creation_with_Java/GETMethodPractice.java)
