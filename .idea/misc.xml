@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Reading_XLS_CSV_using_Maven/pom.xml" />
+        <option value="$PROJECT_DIR$/exract-data-using-post-method/pom.xml" />
       </list>
     </option>
   </component>

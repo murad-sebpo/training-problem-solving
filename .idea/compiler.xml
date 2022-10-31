@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="exract-data-using-post-method" />
         <module name="Reading_XLS_CSV_using_Maven" />
       </profile>
     </annotationProcessing>
