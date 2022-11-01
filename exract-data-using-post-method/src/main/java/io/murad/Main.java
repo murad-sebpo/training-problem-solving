@@ -20,12 +20,12 @@ import org.apache.http.params.HttpParams;
 import org.apache.http.params.HttpParamsNames;
 import org.apache.http.util.EntityUtils;
 import org.apache.commons.httpclient.methods.PostMethod;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
+
+import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -125,8 +125,21 @@ public class Main {
 
         System.out.println(builder.build());
 
-        HttpPost httpPost1 = new HttpPost(builder.build());
+//        HttpPost httpPost1 = new HttpPost(builder.build());
+
+        HttpPost httpPost1 = new HttpPost(POST_URL);
+//        httpPost1.addHeader("__RequestVerificationToken",div);
+//        httpPost1.addHeader("BusinessName", "%a");
+
+        List<NameValuePair> urlParameterss = new ArrayList<NameValuePair>();
+        urlParameterss.add(new BasicNameValuePair("__RequestVerificationToken", div));
+        urlParameterss.add(new BasicNameValuePair("BusinessName", "%a"));
+        HttpEntity postParams = new UrlEncodedFormEntity(urlParameterss);
+        httpPost1.setEntity(postParams);
+
+        System.out.println(httpPost1.getURI());
         PostMethod method = new PostMethod(builder.build().toString());
+
         httpPost1.setHeader("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
         httpPost1.setHeader("Accept-Encoding", "gzip, deflate, br");
         httpPost1.setHeader("Accept-Language","en-US,en;q=0.9");
@@ -161,6 +174,7 @@ public class Main {
 //        httpPost.setEntity(postParams);
 
         System.out.println("POST Response Status:: " + httpResponse3.getStatusLine().getStatusCode());
+
         String result = EntityUtils.toString(httpResponse3.getEntity());
         System.out.println(result);
 
@@ -198,5 +212,10 @@ public class Main {
 //        } finally {
 //            method.releaseConnection();
 //        }
+
+
+//        HttpResponse response = Request.Post("http://www.example.com").bodyForm(
+//                        Form.form().add("username", "John").add("password", "pass").build())
+//                .execute().returnResponse();
     }
 }
