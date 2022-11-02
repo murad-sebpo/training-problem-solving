@@ -55,6 +55,7 @@ public class ExtractWebsiteUsingPostMethodWithParam {
         while (matcher.find()) {
             refreshToken.append(matcher.group(1));
         }
+
         return refreshToken.toString();
     }
 
@@ -98,9 +99,9 @@ public class ExtractWebsiteUsingPostMethodWithParam {
         System.out.println("Waiting... .");
 
         System.out.println("Get Refresh Token");
-        String refreshToken = getRefreshVerificationToken("__RequestVerificationToken.+?value=\"(.+?)\"",getWebsiteContentByGetMethod());
+        String refreshToken = getRefreshVerificationToken("__RequestVerificationToken.+?value=\"(.+?)\"", getWebsiteContentByGetMethod());
 
-        System.out.println("Set Params RefreshVerificationToken and BusinessName");
+        System.out.println("Set Params RequestVerificationToken and BusinessName");
         urlParameters.add(new BasicNameValuePair("__RequestVerificationToken", refreshToken));
         urlParameters.add(new BasicNameValuePair("BusinessName", "%b"));
 
