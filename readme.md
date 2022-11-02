@@ -314,3 +314,7 @@ Retrieve the data in such a way, from the following 3 files (Data1.xls, Data2.xl
 
 ### Extract Data from URL using POST method
 [Implementation](https://github.com/murad-sebpo/training-problem-solving/blob/master/src/io/murad/GET_POST_method_creation_with_Java/PostMethodPractice.java)
+
+## Post - Method with params
+### Extract data using Params By Post Method
+[Implementation](https://github.com/murad-sebpo/training-problem-solving/blob/master/exract-data-using-post-method/src/main/java/io/murad/ExtractWebsiteUsingPostMethodWithParam.java)
